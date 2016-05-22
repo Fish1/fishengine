@@ -56,7 +56,7 @@ public:
 
 	~Snake();
 	
-	void draw(sf::RenderWindow *window);
+	void draw(sf::RenderWindow &window);
 
 	void update(float delta);
 

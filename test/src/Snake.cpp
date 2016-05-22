@@ -89,7 +89,6 @@ void Snake::move()
 	}
 	else if(nodeAtCoord(newX, newY))
 	{
-		//YOU LOST!!!
 		m_dead = true;
 	}
 
@@ -125,7 +124,7 @@ Snake::Node* Snake::getEndNode()
 	return result;
 }
 
-void Snake::draw(sf::RenderWindow *window)
+void Snake::draw(sf::RenderWindow &window)
 {
 	Node *ptr = head;
 
@@ -137,7 +136,7 @@ void Snake::draw(sf::RenderWindow *window)
 
 	rect.setPosition(ptr->x * 10 + 2 * ptr->x, ptr->y * 10 + 2 * ptr->y);
 
-	window->draw(rect);
+	window.draw(rect);
 
 	rect.setFillColor(sf::Color::White);
 	
@@ -147,7 +146,7 @@ void Snake::draw(sf::RenderWindow *window)
 	{
 		rect.setPosition(ptr->x * 10 + 2 * ptr->x, ptr->y * 10 + 2 * ptr->y);
 	
-		window->draw(rect);	
+		window.draw(rect);	
 		
 		ptr = ptr->next;
 	}

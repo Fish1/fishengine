@@ -1,17 +1,13 @@
 #include "Core.h" 
 
-#include "StateMachine.h"
+#include "Label.h"
 
 #include "ResourceManager.h"
 
-#include <iostream>
-
-fe::Core::Core() :
+fe::Core::Core(int width, int height) :
 	m_running(true), m_delta(0.0f),
-	m_window(sf::VideoMode(400, 400), "My Game!")
+	m_window(sf::VideoMode(width, height), "My Game!")
 {
-	loadResources();
-
 	m_stateMachine = new StateMachine(*this);
 }
 
@@ -20,17 +16,9 @@ fe::Core::~Core()
 	delete m_stateMachine;
 }
 
-void fe::Core::loadResources()
+void fe::Core::setWindowTitle(std::string title)
 {
-	ResourceManager& rm = ResourceManager::instance();
-
-	sf::Font *font = new sf::Font();
-
-	font->loadFromFile("unispace.ttf");
-
-	//font->loadFromFile("Resources/Fonts/unispace.ttf");
-
-	rm.put("Font", font);
+	m_window.setTitle(title);
 }
 
 void fe::Core::go()

@@ -1,5 +1,5 @@
-#ifndef INTERFACE
-#define INTERFACE
+#ifndef FE_INTERFACE
+#define FE_INTERFACE
 
 #include <SFML/Graphics.hpp>
 
@@ -10,9 +10,7 @@ namespace fe
 	class Interface : public sf::Drawable, public sf::Transformable
 	{
 	private:
-
-		sf::Vector2f m_position;
-
+		
 		std::list<Interface*> m_children;
 
 	public:

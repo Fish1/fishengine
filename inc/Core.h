@@ -1,5 +1,5 @@
-#ifndef CORE
-#define CORE
+#ifndef FE_CORE
+#define FE_CORE
 
 #include <SFML/Graphics.hpp>
 
@@ -25,11 +25,11 @@ namespace fe
 
 		public:
 
-			Core();
+			Core(int width, int height);
 
 			~Core();
 
-			void loadResources();
+			void setWindowTitle(std::string title);
 
 			void go();
 

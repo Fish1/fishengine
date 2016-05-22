@@ -1,7 +1,7 @@
 #ifndef MENUSTATE
 #define MENUSTATE
 
-#include "State.h"
+#include <State.h>
 
 namespace fe
 {
@@ -9,11 +9,11 @@ namespace fe
 	class Button;
 }
 
-class ExampleState : public fe::State 
+class MenuState: public fe::State 
 {
 private:
 	
-	ExampleState();
+	MenuState();
 
 	fe::Button *m_startButton;
 
@@ -23,9 +23,9 @@ private:
 
 public:
 
-	static ExampleState &instance()
+	static MenuState &instance()
 	{
-		static ExampleState instance;
+		static MenuState instance;
 
 		return instance;	
 	}

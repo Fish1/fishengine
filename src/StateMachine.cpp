@@ -1,13 +1,13 @@
 #include "StateMachine.h"
 
-#include "ExampleState.h"
+#include "EmptyState.h"
 
 #include "Core.h"
 
 fe::StateMachine::StateMachine(Core &core) :
 	m_state(0), m_core(core)
 {
-	m_state = &ExampleState::instance();	
+	m_state = &EmptyState::instance();	
 
 	m_state->enter(core);
 }

@@ -1,5 +1,5 @@
-#ifndef STATEMACHINE
-#define STATEMACHINE
+#ifndef FE_STATEMACHINE
+#define FE_STATEMACHINE
 
 namespace fe
 {

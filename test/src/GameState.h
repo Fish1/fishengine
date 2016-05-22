@@ -1,7 +1,7 @@
 #ifndef GAMESTATE
 #define GAMESTATE
 
-#include "State.h"
+#include <State.h>
 
 class Snake;
 
@@ -11,7 +11,7 @@ private:
 	
 	GameState();
 
-	Snake *m_Snake;
+	Snake *m_snake;
 
 	float m_lastUpdate;
 

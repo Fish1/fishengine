@@ -1,24 +1,28 @@
-#include "ExampleState.h"
+#include "MenuState.h"
+#include "GameState.h"
 
-#include "Core.h"
+#include <Core.h>
+#include <ResourceManager.h>
 
-#include "Button.h"
-#include "Label.h"
+#include <Button.h>
+#include <Label.h>
 
 #include <iostream>
 
-ExampleState::ExampleState() :
+MenuState::MenuState() :
 	m_startButton(0)
 {
 
 }
 
-void ExampleState::enter(fe::Core &core)
+void MenuState::enter(fe::Core &core)
 {
-	std::cout << "Enter Example State" << std::endl;
+	std::cout << "Enter Menu State" << std::endl;
 
 	m_startButton = new fe::Button();	
 
+	//m_startButton->setFont(fe::ResourceManager::instance().getFont("Font"));
+	
 	m_startButton->setText("Play");
 
 	m_startButton->centerX(core.getWindowRectangle());
@@ -29,14 +33,16 @@ void ExampleState::enter(fe::Core &core)
 
 	m_title = new fe::Label();
 
-	m_title->setTextString("Fish Engine");
+	//m_title->setFont(fe::ResourceManager::instance().getFont("Font"));
+
+	m_title->setText("Fish Engine");
 
 	m_title->setPosition(sf::Vector2f(100, 50));
 
 	m_title->centerX(core.getWindowRectangle());
 }
 
-void ExampleState::reactEvent(fe::Core &core)
+void MenuState::reactEvent(fe::Core &core)
 {
 	const sf::Event &event = core.getEvent();
 
@@ -44,13 +50,11 @@ void ExampleState::reactEvent(fe::Core &core)
 	
 	if(m_startButton->isClicked())
 	{
-		std::cout << "You Clicked Play!" << std::endl;
-
-		//core.getStateMachine().setState(GameState::instance());
+		core.getStateMachine().setState(GameState::instance());
 	}
 }
 
-void ExampleState::execute(fe::Core &core)
+void MenuState::execute(fe::Core &core)
 {
 	core.getWindow().clear();
 
@@ -61,11 +65,11 @@ void ExampleState::execute(fe::Core &core)
 	core.getWindow().display();
 }
 
-void ExampleState::exit(fe::Core &core)
+void MenuState::exit(fe::Core &core)
 {
 	delete m_startButton;
 
 	delete m_title;
 
-	std::cout << "Exit Example State" << std::endl;
+	std::cout << "Exit Menu State" << std::endl;
 }

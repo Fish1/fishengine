@@ -1,8 +1,9 @@
 #include "GameState.h"
+#include "MenuState.h"
 
 #include "Snake.h"
 
-#include "Core.h"
+#include <Core.h>
 
 #include <SFML/Graphics.hpp>
 
@@ -17,36 +18,36 @@ void GameState::enter(fe::Core &core)
 {
 	std::cout << "Enter Game State" << std::endl;
 
-	m_Snake = new Snake();
+	m_snake = new Snake();
 
 	m_lastUpdate = 0;
 }
 
 void GameState::reactEvent(fe::Core &core)
 {
-	sf::Event event = core.getEvent();
+	const sf::Event &event = core.getEvent();
 
 	if(event.type == sf::Event::KeyPressed)
 	{
 		if(event.key.code == sf::Keyboard::Up)
 		{
-			m_Snake->setDirection(UP);
+			m_snake->setDirection(UP);
 		}
 		else if(event.key.code == sf::Keyboard::Down)
 		{
-			m_Snake->setDirection(DOWN);
+			m_snake->setDirection(DOWN);
 		}
 		else if(event.key.code == sf::Keyboard::Left)
 		{
-			m_Snake->setDirection(LEFT);	
+			m_snake->setDirection(LEFT);	
 		}
 		else if(event.key.code == sf::Keyboard::Right)
 		{
-			m_Snake->setDirection(RIGHT);
+			m_snake->setDirection(RIGHT);
 		}
-		else if(event.key.code == sf::Keyboard::Space)
+		else if(event.key.code == sf::Keyboard::Escape)
 		{
-			//core.getStateMachine().setState(MenuState::instance());
+			core.getStateMachine().setState(MenuState::instance());
 		}
 	}
 }
@@ -57,28 +58,26 @@ void GameState::execute(fe::Core &core)
 
 	if(m_lastUpdate >= 0.1f)
 	{
-		m_Snake->update(m_lastUpdate);
+		m_snake->update(m_lastUpdate);
 
 		core.getWindow().clear();
 
-		m_Snake->draw(&core.getWindow());
+		m_snake->draw(core.getWindow());
 	
 		core.getWindow().display();
 	
 		m_lastUpdate = 0;
 	}
 	
-	if(m_Snake->isDead())
+	if(m_snake->isDead())
 	{
-		std::cout << "YOU LOSE!" << std::endl;
-
-		//game.getStateMachine().setState(GameOverState::instance(m_Snake->size() - 1));
+		core.getStateMachine().setState(MenuState::instance());
 	}
 }
 
 void GameState::exit(fe::Core &core)
 {
-	delete m_Snake;
+	delete m_snake;
 
 	std::cout << "Exit Game State" << std::endl;
 }

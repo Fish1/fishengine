@@ -1,34 +1,50 @@
-#ifndef RESOURCEMANAGER
-#define RESOURCEMANAGER
+#ifndef FE_RESOURCEMANAGER
+#define FE_RESOURCEMANAGER
 
 #include <map>
+
 #include <string>
 
-class ResourceManager
+namespace sf
 {
-private:
+	class Font;
+}
 
-	std::map<std::string, void*> *m_resources;
-
-private:
-
-	ResourceManager();
-
-	~ResourceManager();
-
-public:
-
-	static ResourceManager& instance()
+namespace fe
+{
+	class ResourceManager
 	{
-		static ResourceManager instance;
+	private:
 
-		return instance;
-	}
+		std::map<std::string, void*> *m_resources;
 
-	void* get(std::string key);
+	private:
 
-	void put(std::string key, void *object);
+		ResourceManager();
+
+		~ResourceManager();
+
+		void* get(std::string key);
+		
+		void put(std::string key, void *object);
+
+	public:
+
+		static ResourceManager& instance() 
+		{
+			static ResourceManager instance;
+
+			return instance;
+		}
+
+		void loadFont(std::string key, std::string fileName);
 	
-};
+		sf::Font& getFont(std::string key);
+
+		void free(std::string key);
+	
+		void freeAll();
+	};
+}
 
 #endif

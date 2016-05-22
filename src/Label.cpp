@@ -6,9 +6,16 @@
 
 #include <SFML/Graphics.hpp>
 
+const sf::Font *fe::Label::sm_defaultFont = 0;
+
 fe::Label::Label()
 {
-	m_text = new sf::Text("a", *((sf::Font*)ResourceManager::instance().get("Font")));
+	m_text = new sf::Text();
+
+	if(sm_defaultFont != 0)
+	{
+		m_text->setFont(*fe::Label::sm_defaultFont);
+	}
 }
 
 fe::Label::~Label()
@@ -34,19 +41,29 @@ void fe::Label::centerY(const sf::Rect<float> &space)
 	setPosition(getPosition().x, newY);
 }
 
-void fe::Label::setTextString(std::string text)
+void fe::Label::setText(std::string text)
 {
 	m_text->setString(text);
 }
 
-void fe::Label::setTextColor(sf::Color color)
+void fe::Label::setColor(sf::Color color)
 {
 	m_text->setColor(color);
 }
 
-void fe::Label::setTextSize(unsigned int size)
+void fe::Label::setSize(unsigned int size)
 {
 	m_text->setCharacterSize(size);
+}
+
+void fe::Label::setFont(const sf::Font &font)
+{
+	m_text->setFont(font);
+}
+
+void fe::Label::setDefaultFont(const sf::Font *font)
+{
+	sm_defaultFont = font;
 }
 
 void fe::Label::onEvent(const sf::Event &event)

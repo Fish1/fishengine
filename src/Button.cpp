@@ -9,8 +9,8 @@ fe::Button::Button() :
 	m_isClicked(false)
 {
 	m_label = new Label();
-	m_label->setTextColor(sf::Color::Black);
-	m_label->setTextSize(12);
+	m_label->setColor(sf::Color::Black);
+	m_label->setSize(12);
 
 	addChild(m_label);
 
@@ -23,9 +23,14 @@ fe::Button::~Button()
 	delete m_label;
 }
 
+void fe::Button::setFont(const sf::Font &font)
+{
+	m_label->setFont(font);
+}
+
 void fe::Button::setText(std::string text)
 {
-	m_label->setTextString(text);
+	m_label->setText(text);
 	
 	m_label->centerX(m_shape.getLocalBounds());
 	m_label->centerY(m_shape.getLocalBounds());

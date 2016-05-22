@@ -1,5 +1,5 @@
-#ifndef STATE
-#define STATE
+#ifndef FE_STATE
+#define FE_STATE
 
 namespace fe
 {
@@ -25,7 +25,6 @@ namespace fe
 			
 		virtual void exit(Core &core) = 0;
 	};
-
 }	
 
 #endif
