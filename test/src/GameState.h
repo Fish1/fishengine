@@ -31,7 +31,6 @@ public:
 	void execute(fe::Core &core);
 	
 	void exit(fe::Core &core);
-
 };
 
 #endif

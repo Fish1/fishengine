@@ -5,6 +5,8 @@
 
 #include <string>
 
+#include <memory>
+
 namespace sf
 {
 	class Font;
@@ -16,7 +18,7 @@ namespace fe
 	{
 	private:
 
-		std::map<std::string, void*> *m_resources;
+		std::map<std::string, std::shared_ptr<void>> *m_resources;
 
 	private:
 
@@ -24,9 +26,9 @@ namespace fe
 
 		~ResourceManager();
 
-		void* get(std::string key);
+		std::shared_ptr<void> get(std::string key);
 		
-		void put(std::string key, void *object);
+		void put(std::string key, std::shared_ptr<void> object);
 
 	public:
 

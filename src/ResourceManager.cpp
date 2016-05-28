@@ -6,7 +6,7 @@
 
 fe::ResourceManager::ResourceManager()
 {
-	m_resources = new std::map<std::string, void*>;
+	m_resources = new std::map<std::string, std::shared_ptr<void>>; 
 }
 
 fe::ResourceManager::~ResourceManager()
@@ -14,19 +14,19 @@ fe::ResourceManager::~ResourceManager()
 	delete m_resources;
 }
 
-void* fe::ResourceManager::get(std::string key)
+std::shared_ptr<void> fe::ResourceManager::get(std::string key)
 {
 	return m_resources->at(key);
 }
 
-void fe::ResourceManager::put(std::string key, void *object)
+void fe::ResourceManager::put(std::string key, std::shared_ptr<void> object)
 {
 	m_resources->emplace(key, object);
 }
 
 void fe::ResourceManager::loadFont(std::string key, std::string fileName)
 {
-	sf::Font *font = new sf::Font();
+	std::shared_ptr<sf::Font> font = std::make_shared<sf::Font>();
 
 	font->loadFromFile(fileName);
 
@@ -35,7 +35,7 @@ void fe::ResourceManager::loadFont(std::string key, std::string fileName)
 
 sf::Font& fe::ResourceManager::getFont(std::string key)
 {
-	return *(sf::Font*)get(key);
+	return *std::static_pointer_cast<sf::Font>(get(key));
 }
 
 void fe::ResourceManager::free(std::string key)
@@ -45,12 +45,12 @@ void fe::ResourceManager::free(std::string key)
 
 void fe::ResourceManager::freeAll()
 {
+	/*
 	std::map<std::string, void*>::iterator it = m_resources->begin();
 
 	while(it != m_resources->end())
 	{
-		#ifdef DEBUG
-		
+		#ifdef DEBUG	
 			std::cout << "Resource Manager: delete " + it->first << std::endl;
 		#endif
 
@@ -60,4 +60,5 @@ void fe::ResourceManager::freeAll()
 	}
 
 	m_resources->clear();
+	*/
 }
