@@ -11,6 +11,8 @@ namespace fe
 	{
 	private:
 
+		State * m_nextState;
+
 		State * m_state;
 
 		Core &m_core;

@@ -14,9 +14,11 @@ int main(void)
 
 	rm.loadFont("Font", "resources/fonts/unispace.ttf");
 
+	rm.loadSoundBuffer("Score", "resources/sounds/score.wav");
+
 	fe::Label::setDefaultFont(&rm.getFont("Font"));
 
-	fe::Core *core = new fe::Core(500, 500);
+	fe::Core *core = new fe::Core(300, 300);
 
 	core->getStateMachine().setState(MenuState::instance());	
 

@@ -2,6 +2,8 @@
 
 #include <SFML/Graphics.hpp>
 
+#include <SFML/Audio.hpp>
+
 #include <iostream>
 
 fe::ResourceManager::ResourceManager()
@@ -22,6 +24,20 @@ std::shared_ptr<void> fe::ResourceManager::get(std::string key)
 void fe::ResourceManager::put(std::string key, std::shared_ptr<void> object)
 {
 	m_resources->emplace(key, object);
+}
+
+void fe::ResourceManager::loadSoundBuffer(std::string key, std::string fileName)
+{
+	std::shared_ptr<sf::SoundBuffer> soundBuffer = std::make_shared<sf::SoundBuffer>();
+
+	soundBuffer->loadFromFile(fileName);
+
+	put(key, soundBuffer);
+}
+
+sf::SoundBuffer& fe::ResourceManager::getSoundBuffer(std::string key)
+{
+	return *std::static_pointer_cast<sf::SoundBuffer>(get(key));
 }
 
 void fe::ResourceManager::loadFont(std::string key, std::string fileName)

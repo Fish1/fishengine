@@ -1,9 +1,12 @@
 #include "Snake.h"
 
+#include <ResourceManager.h>
+
 #include <SFML/Graphics.hpp>
 
 Snake::Snake() :
-	head(0), direction(DOWN), deltaDirection(DOWN), m_dead(false)
+	m_sound(fe::ResourceManager::instance().getSoundBuffer("Score")), 
+	head(0), direction(DOWN), deltaDirection(DOWN), m_dead(false), m_score(0)
 {
 	head = new Node();
 	head->x = 3;
@@ -86,6 +89,10 @@ void Snake::move()
 		expand();
 		
 		moveFood();
+
+		++m_score;
+
+		m_sound.play();
 	}
 	else if(nodeAtCoord(newX, newY))
 	{
@@ -95,7 +102,6 @@ void Snake::move()
 	ptr->x = newX;
 	ptr->y = newY;
 }
-
 void Snake::moveFood()
 {
 	int x;
@@ -197,6 +203,20 @@ void Snake::expand()
 	tmp->y = tmp->next->y;	
 }
 
+int Snake::positionX()
+{
+	Node *node = getEndNode();
+
+	return node->x;
+}
+
+int Snake::positionY()
+{
+	Node *node = getEndNode();
+
+	return node->y;
+}
+
 int Snake::size()
 {
 	int result = 0;
@@ -211,6 +231,11 @@ int Snake::size()
 	}
 
 	return result;
+}
+
+int Snake::score()
+{
+	return m_score;
 }
 
 bool Snake::isDead()

@@ -1,9 +1,12 @@
 #include "GameState.h"
 #include "MenuState.h"
+#include "GameOverState.h"
 
 #include "Snake.h"
 
 #include <Core.h>
+
+#include <ResourceManager.h>
 
 #include <SFML/Graphics.hpp>
 
@@ -20,12 +23,16 @@ void GameState::enter(fe::Core &core)
 
 	m_snake = new Snake();
 
+	m_counter = new fe::Counter();
+
 	m_lastUpdate = 0;
 }
 
 void GameState::reactEvent(fe::Core &core)
 {
 	const sf::Event &event = core.getEvent();
+
+	m_counter->onEvent(event);
 
 	if(event.type == sf::Event::KeyPressed)
 	{
@@ -58,12 +65,16 @@ void GameState::execute(fe::Core &core)
 
 	if(m_lastUpdate >= 0.1f)
 	{
+		m_counter->setCount(m_snake->score());
+
 		m_snake->update(m_lastUpdate);
 
 		core.getWindow().clear();
 
 		m_snake->draw(core.getWindow());
-	
+
+		core.getWindow().draw(*m_counter);
+
 		core.getWindow().display();
 	
 		m_lastUpdate = 0;
@@ -71,13 +82,26 @@ void GameState::execute(fe::Core &core)
 	
 	if(m_snake->isDead())
 	{
-		core.getStateMachine().setState(MenuState::instance());
+		//core.getStateMachine().setState(MenuState::instance());
+		core.getStateMachine().setState(GameOverState::instance());
+	}
+
+	int x = m_snake->positionX();
+
+	int y = m_snake->positionY();
+
+	if(x == -1 || y == -1 || x == 25 || y == 25)
+	{
+		//core.getStateMachine().setState(MenuState::instance());
+		core.getStateMachine().setState(GameOverState::instance());
 	}
 }
 
 void GameState::exit(fe::Core &core)
 {
 	delete m_snake;
+
+	delete m_counter;
 
 	std::cout << "Exit Game State" << std::endl;
 }

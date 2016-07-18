@@ -10,6 +10,8 @@
 namespace sf
 {
 	class Font;
+
+	class SoundBuffer;
 }
 
 namespace fe
@@ -38,6 +40,10 @@ namespace fe
 
 			return instance;
 		}
+
+		void loadSoundBuffer(std::string key, std::string fileName);
+
+		sf::SoundBuffer& getSoundBuffer(std::string key);
 
 		void loadFont(std::string key, std::string fileName);
 	

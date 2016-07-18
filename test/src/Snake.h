@@ -1,6 +1,8 @@
 #ifndef SNAKE
 #define SNAKE
 
+#include <Sound.h>
+
 namespace sf
 {
 	class RenderWindow;
@@ -33,12 +35,16 @@ public:
 private:
 
 	Node *head;
+
+	fe::Sound m_sound;
 	
 	DIRECTION direction;
 
 	DIRECTION deltaDirection;
 
 	bool m_dead;
+
+	int m_score;
 
 private:
 
@@ -64,7 +70,13 @@ public:
 
 	void expand();
 
+	int positionX();
+
+	int positionY();
+
 	int size();
+
+	int score();
 
 	bool isDead();
 };

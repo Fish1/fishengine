@@ -42,7 +42,8 @@ namespace fe
 
 		void onEvent(const sf::Event &event);
 		
-		void onDraw(sf::RenderTarget &target, const sf::RenderStates &states) const;		};
+		virtual void onDraw(sf::RenderTarget &target, const sf::RenderStates &states) const;
+	};
 }
 
 #endif

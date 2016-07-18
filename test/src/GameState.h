@@ -3,6 +3,10 @@
 
 #include <State.h>
 
+#include <Counter.h>
+
+#include <Sound.h>
+
 class Snake;
 
 class GameState : public fe::State
@@ -14,6 +18,8 @@ private:
 	Snake *m_snake;
 
 	float m_lastUpdate;
+
+	fe::Counter *m_counter;
 
 public:
 

@@ -5,7 +5,7 @@
 #include "Core.h"
 
 fe::StateMachine::StateMachine(Core &core) :
-	m_state(0), m_core(core)
+	m_state(nullptr), m_nextState(nullptr), m_core(core)
 {
 	m_state = &EmptyState::instance();	
 
@@ -14,11 +14,15 @@ fe::StateMachine::StateMachine(Core &core) :
 
 void fe::StateMachine::setState(State &state)
 {
+	m_nextState = &state;
+
+	/*
 	m_state->exit(m_core);
 
 	m_state = &state;
 
 	m_state->enter(m_core);	
+	*/
 }
 
 void fe::StateMachine::reactEvent()
@@ -28,5 +32,14 @@ void fe::StateMachine::reactEvent()
 
 void fe::StateMachine::execute()
 {
-	m_state->execute(m_core);
-}
+	if(m_nextState != nullptr)
+	{
+		m_state->exit(m_core);
+
+		m_state = m_nextState;
+
+		m_state->enter(m_core);
+
+		m_nextState = nullptr;
+	}
+m_state->execute(m_core); }
