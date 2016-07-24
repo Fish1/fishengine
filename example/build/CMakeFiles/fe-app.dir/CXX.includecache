@@ -46,11 +46,11 @@ memory
 
 ../../inc/StateMachine.h
 
-/home/jacob/Programming/FishEngine/test/src/GameOverState.cpp
+/home/jacob/Programming/FishEngine/example/src/GameOverState.cpp
 GameOverState.h
-/home/jacob/Programming/FishEngine/test/src/GameOverState.h
+/home/jacob/Programming/FishEngine/example/src/GameOverState.h
 MenuState.h
-/home/jacob/Programming/FishEngine/test/src/MenuState.h
+/home/jacob/Programming/FishEngine/example/src/MenuState.h
 Core.h
 -
 Label.h
@@ -62,19 +62,19 @@ string
 iostream
 -
 
-/home/jacob/Programming/FishEngine/test/src/GameOverState.h
+/home/jacob/Programming/FishEngine/example/src/GameOverState.h
 State.h
 -
 
-/home/jacob/Programming/FishEngine/test/src/GameState.cpp
+/home/jacob/Programming/FishEngine/example/src/GameState.cpp
 GameState.h
-/home/jacob/Programming/FishEngine/test/src/GameState.h
+/home/jacob/Programming/FishEngine/example/src/GameState.h
 MenuState.h
-/home/jacob/Programming/FishEngine/test/src/MenuState.h
+/home/jacob/Programming/FishEngine/example/src/MenuState.h
 GameOverState.h
-/home/jacob/Programming/FishEngine/test/src/GameOverState.h
+/home/jacob/Programming/FishEngine/example/src/GameOverState.h
 Snake.h
-/home/jacob/Programming/FishEngine/test/src/Snake.h
+/home/jacob/Programming/FishEngine/example/src/Snake.h
 Core.h
 -
 ResourceManager.h
@@ -84,7 +84,7 @@ SFML/Graphics.hpp
 iostream
 -
 
-/home/jacob/Programming/FishEngine/test/src/GameState.h
+/home/jacob/Programming/FishEngine/example/src/GameState.h
 State.h
 -
 Counter.h
@@ -92,11 +92,11 @@ Counter.h
 Sound.h
 -
 
-/home/jacob/Programming/FishEngine/test/src/MenuState.cpp
+/home/jacob/Programming/FishEngine/example/src/MenuState.cpp
 MenuState.h
-/home/jacob/Programming/FishEngine/test/src/MenuState.h
+/home/jacob/Programming/FishEngine/example/src/MenuState.h
 GameState.h
-/home/jacob/Programming/FishEngine/test/src/GameState.h
+/home/jacob/Programming/FishEngine/example/src/GameState.h
 Core.h
 -
 ResourceManager.h
@@ -108,13 +108,13 @@ Label.h
 iostream
 -
 
-/home/jacob/Programming/FishEngine/test/src/MenuState.h
+/home/jacob/Programming/FishEngine/example/src/MenuState.h
 State.h
 -
 
-/home/jacob/Programming/FishEngine/test/src/Snake.cpp
+/home/jacob/Programming/FishEngine/example/src/Snake.cpp
 Snake.h
-/home/jacob/Programming/FishEngine/test/src/Snake.h
+/home/jacob/Programming/FishEngine/example/src/Snake.h
 ResourceManager.h
 -
 SFML/Graphics.hpp
@@ -122,11 +122,11 @@ SFML/Graphics.hpp
 iostream
 -
 
-/home/jacob/Programming/FishEngine/test/src/Snake.h
+/home/jacob/Programming/FishEngine/example/src/Snake.h
 Sound.h
 -
 
-/home/jacob/Programming/FishEngine/test/src/driver.cpp
+/home/jacob/Programming/FishEngine/example/src/driver.cpp
 Core.h
 -
 ResourceManager.h
@@ -134,5 +134,5 @@ ResourceManager.h
 Label.h
 -
 MenuState.h
-/home/jacob/Programming/FishEngine/test/src/MenuState.h
+/home/jacob/Programming/FishEngine/example/src/MenuState.h
 

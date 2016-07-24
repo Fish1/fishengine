@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jacob/Programming/FishEngine/test
+CMAKE_SOURCE_DIR = /home/jacob/Programming/FishEngine/example
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jacob/Programming/FishEngine/test/build
+CMAKE_BINARY_DIR = /home/jacob/Programming/FishEngine/example/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/fe-app.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/fe-app.dir/flags.make
 
 CMakeFiles/fe-app.dir/src/driver.cpp.o: CMakeFiles/fe-app.dir/flags.make
 CMakeFiles/fe-app.dir/src/driver.cpp.o: ../src/driver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jacob/Programming/FishEngine/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fe-app.dir/src/driver.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fe-app.dir/src/driver.cpp.o -c /home/jacob/Programming/FishEngine/test/src/driver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jacob/Programming/FishEngine/example/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fe-app.dir/src/driver.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fe-app.dir/src/driver.cpp.o -c /home/jacob/Programming/FishEngine/example/src/driver.cpp
 
 CMakeFiles/fe-app.dir/src/driver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fe-app.dir/src/driver.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jacob/Programming/FishEngine/test/src/driver.cpp > CMakeFiles/fe-app.dir/src/driver.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jacob/Programming/FishEngine/example/src/driver.cpp > CMakeFiles/fe-app.dir/src/driver.cpp.i
 
 CMakeFiles/fe-app.dir/src/driver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fe-app.dir/src/driver.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jacob/Programming/FishEngine/test/src/driver.cpp -o CMakeFiles/fe-app.dir/src/driver.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jacob/Programming/FishEngine/example/src/driver.cpp -o CMakeFiles/fe-app.dir/src/driver.cpp.s
 
 CMakeFiles/fe-app.dir/src/driver.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/fe-app.dir/src/driver.cpp.o.provides.build: CMakeFiles/fe-app.dir/src
 
 CMakeFiles/fe-app.dir/src/GameState.cpp.o: CMakeFiles/fe-app.dir/flags.make
 CMakeFiles/fe-app.dir/src/GameState.cpp.o: ../src/GameState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jacob/Programming/FishEngine/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fe-app.dir/src/GameState.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fe-app.dir/src/GameState.cpp.o -c /home/jacob/Programming/FishEngine/test/src/GameState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jacob/Programming/FishEngine/example/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fe-app.dir/src/GameState.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fe-app.dir/src/GameState.cpp.o -c /home/jacob/Programming/FishEngine/example/src/GameState.cpp
 
 CMakeFiles/fe-app.dir/src/GameState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fe-app.dir/src/GameState.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jacob/Programming/FishEngine/test/src/GameState.cpp > CMakeFiles/fe-app.dir/src/GameState.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jacob/Programming/FishEngine/example/src/GameState.cpp > CMakeFiles/fe-app.dir/src/GameState.cpp.i
 
 CMakeFiles/fe-app.dir/src/GameState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fe-app.dir/src/GameState.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jacob/Programming/FishEngine/test/src/GameState.cpp -o CMakeFiles/fe-app.dir/src/GameState.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jacob/Programming/FishEngine/example/src/GameState.cpp -o CMakeFiles/fe-app.dir/src/GameState.cpp.s
 
 CMakeFiles/fe-app.dir/src/GameState.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/fe-app.dir/src/GameState.cpp.o.provides.build: CMakeFiles/fe-app.dir/
 
 CMakeFiles/fe-app.dir/src/MenuState.cpp.o: CMakeFiles/fe-app.dir/flags.make
 CMakeFiles/fe-app.dir/src/MenuState.cpp.o: ../src/MenuState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jacob/Programming/FishEngine/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fe-app.dir/src/MenuState.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fe-app.dir/src/MenuState.cpp.o -c /home/jacob/Programming/FishEngine/test/src/MenuState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jacob/Programming/FishEngine/example/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fe-app.dir/src/MenuState.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fe-app.dir/src/MenuState.cpp.o -c /home/jacob/Programming/FishEngine/example/src/MenuState.cpp
 
 CMakeFiles/fe-app.dir/src/MenuState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fe-app.dir/src/MenuState.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jacob/Programming/FishEngine/test/src/MenuState.cpp > CMakeFiles/fe-app.dir/src/MenuState.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jacob/Programming/FishEngine/example/src/MenuState.cpp > CMakeFiles/fe-app.dir/src/MenuState.cpp.i
 
 CMakeFiles/fe-app.dir/src/MenuState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fe-app.dir/src/MenuState.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jacob/Programming/FishEngine/test/src/MenuState.cpp -o CMakeFiles/fe-app.dir/src/MenuState.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jacob/Programming/FishEngine/example/src/MenuState.cpp -o CMakeFiles/fe-app.dir/src/MenuState.cpp.s
 
 CMakeFiles/fe-app.dir/src/MenuState.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/fe-app.dir/src/MenuState.cpp.o.provides.build: CMakeFiles/fe-app.dir/
 
 CMakeFiles/fe-app.dir/src/GameOverState.cpp.o: CMakeFiles/fe-app.dir/flags.make
 CMakeFiles/fe-app.dir/src/GameOverState.cpp.o: ../src/GameOverState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jacob/Programming/FishEngine/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fe-app.dir/src/GameOverState.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fe-app.dir/src/GameOverState.cpp.o -c /home/jacob/Programming/FishEngine/test/src/GameOverState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jacob/Programming/FishEngine/example/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fe-app.dir/src/GameOverState.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fe-app.dir/src/GameOverState.cpp.o -c /home/jacob/Programming/FishEngine/example/src/GameOverState.cpp
 
 CMakeFiles/fe-app.dir/src/GameOverState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fe-app.dir/src/GameOverState.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jacob/Programming/FishEngine/test/src/GameOverState.cpp > CMakeFiles/fe-app.dir/src/GameOverState.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jacob/Programming/FishEngine/example/src/GameOverState.cpp > CMakeFiles/fe-app.dir/src/GameOverState.cpp.i
 
 CMakeFiles/fe-app.dir/src/GameOverState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fe-app.dir/src/GameOverState.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jacob/Programming/FishEngine/test/src/GameOverState.cpp -o CMakeFiles/fe-app.dir/src/GameOverState.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jacob/Programming/FishEngine/example/src/GameOverState.cpp -o CMakeFiles/fe-app.dir/src/GameOverState.cpp.s
 
 CMakeFiles/fe-app.dir/src/GameOverState.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/fe-app.dir/src/GameOverState.cpp.o.provides.build: CMakeFiles/fe-app.
 
 CMakeFiles/fe-app.dir/src/Snake.cpp.o: CMakeFiles/fe-app.dir/flags.make
 CMakeFiles/fe-app.dir/src/Snake.cpp.o: ../src/Snake.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jacob/Programming/FishEngine/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fe-app.dir/src/Snake.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fe-app.dir/src/Snake.cpp.o -c /home/jacob/Programming/FishEngine/test/src/Snake.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jacob/Programming/FishEngine/example/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fe-app.dir/src/Snake.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fe-app.dir/src/Snake.cpp.o -c /home/jacob/Programming/FishEngine/example/src/Snake.cpp
 
 CMakeFiles/fe-app.dir/src/Snake.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fe-app.dir/src/Snake.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jacob/Programming/FishEngine/test/src/Snake.cpp > CMakeFiles/fe-app.dir/src/Snake.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jacob/Programming/FishEngine/example/src/Snake.cpp > CMakeFiles/fe-app.dir/src/Snake.cpp.i
 
 CMakeFiles/fe-app.dir/src/Snake.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fe-app.dir/src/Snake.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jacob/Programming/FishEngine/test/src/Snake.cpp -o CMakeFiles/fe-app.dir/src/Snake.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jacob/Programming/FishEngine/example/src/Snake.cpp -o CMakeFiles/fe-app.dir/src/Snake.cpp.s
 
 CMakeFiles/fe-app.dir/src/Snake.cpp.o.requires:
 
@@ -195,9 +195,9 @@ fe-app: CMakeFiles/fe-app.dir/src/GameOverState.cpp.o
 fe-app: CMakeFiles/fe-app.dir/src/Snake.cpp.o
 fe-app: CMakeFiles/fe-app.dir/build.make
 fe-app: CMakeFiles/fe-app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jacob/Programming/FishEngine/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable fe-app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jacob/Programming/FishEngine/example/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable fe-app"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fe-app.dir/link.txt --verbose=$(VERBOSE)
-	/usr/bin/cmake -E copy fe-app /home/jacob/Programming/FishEngine/test/build/fe-app ..
+	/usr/bin/cmake -E copy fe-app /home/jacob/Programming/FishEngine/example/build/fe-app ..
 
 # Rule to build all files generated by this target.
 CMakeFiles/fe-app.dir/build: fe-app
@@ -217,6 +217,6 @@ CMakeFiles/fe-app.dir/clean:
 .PHONY : CMakeFiles/fe-app.dir/clean
 
 CMakeFiles/fe-app.dir/depend:
-	cd /home/jacob/Programming/FishEngine/test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jacob/Programming/FishEngine/test /home/jacob/Programming/FishEngine/test /home/jacob/Programming/FishEngine/test/build /home/jacob/Programming/FishEngine/test/build /home/jacob/Programming/FishEngine/test/build/CMakeFiles/fe-app.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jacob/Programming/FishEngine/example/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jacob/Programming/FishEngine/example /home/jacob/Programming/FishEngine/example /home/jacob/Programming/FishEngine/example/build /home/jacob/Programming/FishEngine/example/build /home/jacob/Programming/FishEngine/example/build/CMakeFiles/fe-app.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/fe-app.dir/depend
 

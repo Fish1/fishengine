@@ -7,9 +7,9 @@ CMakeFiles/fe-app.dir/src/GameOverState.cpp.o
  ../../inc/Label.h
  ../../inc/State.h
  ../../inc/StateMachine.h
- /home/jacob/Programming/FishEngine/test/src/GameOverState.cpp
- /home/jacob/Programming/FishEngine/test/src/GameOverState.h
- /home/jacob/Programming/FishEngine/test/src/MenuState.h
+ /home/jacob/Programming/FishEngine/example/src/GameOverState.cpp
+ /home/jacob/Programming/FishEngine/example/src/GameOverState.h
+ /home/jacob/Programming/FishEngine/example/src/MenuState.h
 CMakeFiles/fe-app.dir/src/GameState.cpp.o
  ../../inc/Core.h
  ../../inc/Counter.h
@@ -19,11 +19,11 @@ CMakeFiles/fe-app.dir/src/GameState.cpp.o
  ../../inc/Sound.h
  ../../inc/State.h
  ../../inc/StateMachine.h
- /home/jacob/Programming/FishEngine/test/src/GameOverState.h
- /home/jacob/Programming/FishEngine/test/src/GameState.cpp
- /home/jacob/Programming/FishEngine/test/src/GameState.h
- /home/jacob/Programming/FishEngine/test/src/MenuState.h
- /home/jacob/Programming/FishEngine/test/src/Snake.h
+ /home/jacob/Programming/FishEngine/example/src/GameOverState.h
+ /home/jacob/Programming/FishEngine/example/src/GameState.cpp
+ /home/jacob/Programming/FishEngine/example/src/GameState.h
+ /home/jacob/Programming/FishEngine/example/src/MenuState.h
+ /home/jacob/Programming/FishEngine/example/src/Snake.h
 CMakeFiles/fe-app.dir/src/MenuState.cpp.o
  ../../inc/Button.h
  ../../inc/Core.h
@@ -34,14 +34,14 @@ CMakeFiles/fe-app.dir/src/MenuState.cpp.o
  ../../inc/Sound.h
  ../../inc/State.h
  ../../inc/StateMachine.h
- /home/jacob/Programming/FishEngine/test/src/GameState.h
- /home/jacob/Programming/FishEngine/test/src/MenuState.cpp
- /home/jacob/Programming/FishEngine/test/src/MenuState.h
+ /home/jacob/Programming/FishEngine/example/src/GameState.h
+ /home/jacob/Programming/FishEngine/example/src/MenuState.cpp
+ /home/jacob/Programming/FishEngine/example/src/MenuState.h
 CMakeFiles/fe-app.dir/src/Snake.cpp.o
  ../../inc/ResourceManager.h
  ../../inc/Sound.h
- /home/jacob/Programming/FishEngine/test/src/Snake.cpp
- /home/jacob/Programming/FishEngine/test/src/Snake.h
+ /home/jacob/Programming/FishEngine/example/src/Snake.cpp
+ /home/jacob/Programming/FishEngine/example/src/Snake.h
 CMakeFiles/fe-app.dir/src/driver.cpp.o
  ../../inc/Core.h
  ../../inc/Interface.h
@@ -49,5 +49,5 @@ CMakeFiles/fe-app.dir/src/driver.cpp.o
  ../../inc/ResourceManager.h
  ../../inc/State.h
  ../../inc/StateMachine.h
- /home/jacob/Programming/FishEngine/test/src/MenuState.h
- /home/jacob/Programming/FishEngine/test/src/driver.cpp
+ /home/jacob/Programming/FishEngine/example/src/MenuState.h
+ /home/jacob/Programming/FishEngine/example/src/driver.cpp

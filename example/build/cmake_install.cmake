@@ -1,4 +1,4 @@
-# Install script for directory: /home/jacob/Programming/FishEngine/test
+# Install script for directory: /home/jacob/Programming/FishEngine/example
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/jacob/Programming/FishEngine/test/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/jacob/Programming/FishEngine/example/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
