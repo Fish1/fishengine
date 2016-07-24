@@ -4,6 +4,8 @@
 
 #include <SFML/Graphics.hpp>
 
+#include <iostream>
+
 Snake::Snake() :
 	m_sound(fe::ResourceManager::instance().getSoundBuffer("Score")), 
 	head(0), direction(DOWN), deltaDirection(DOWN), m_dead(false), m_score(0)
@@ -102,6 +104,7 @@ void Snake::move()
 	ptr->x = newX;
 	ptr->y = newY;
 }
+
 void Snake::moveFood()
 {
 	int x;
@@ -109,8 +112,8 @@ void Snake::moveFood()
 
 	do
 	{
-		x = rand() % 12;
-		y = rand() % 12;
+		x = rand() % 25;
+		y = rand() % 25;
 	}
 	while(nodeAtCoord(x, y));
 

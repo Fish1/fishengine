@@ -25,6 +25,8 @@ void GameState::enter(fe::Core &core)
 
 	m_counter = new fe::Counter();
 
+	m_counter->setPosition(sf::Vector2f(9.0f, 9.0f));
+
 	m_lastUpdate = 0;
 }
 
@@ -82,6 +84,8 @@ void GameState::execute(fe::Core &core)
 	
 	if(m_snake->isDead())
 	{
+		GameOverState::instance().setScore(m_snake->score());
+
 		//core.getStateMachine().setState(MenuState::instance());
 		core.getStateMachine().setState(GameOverState::instance());
 	}
@@ -92,6 +96,8 @@ void GameState::execute(fe::Core &core)
 
 	if(x == -1 || y == -1 || x == 25 || y == 25)
 	{
+		GameOverState::instance().setScore(m_snake->score());
+	
 		//core.getStateMachine().setState(MenuState::instance());
 		core.getStateMachine().setState(GameOverState::instance());
 	}

@@ -18,6 +18,10 @@ private:
 	
 	float m_timeInState;
 
+	fe::Label *m_scoreLabel;
+
+	int m_score;
+
 public:
 
 	static GameOverState &instance()
@@ -34,6 +38,8 @@ public:
 	void execute(fe::Core &core);
 
 	void exit(fe::Core &core);
+
+	void setScore(unsigned int score);
 }; 
 
 #endif
