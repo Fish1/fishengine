@@ -1,0 +1,3 @@
+/home/jacob/Programming/FishEngine/test/build/CMakeFiles/edit_cache.dir
+/home/jacob/Programming/FishEngine/test/build/CMakeFiles/rebuild_cache.dir
+/home/jacob/Programming/FishEngine/test/build/CMakeFiles/fe-app.dir
