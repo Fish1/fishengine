@@ -1,5 +1,5 @@
 /build
 /inc
 /lib
-/test/build
-/test/fe-app
+/example/build
+/example/fe-app
